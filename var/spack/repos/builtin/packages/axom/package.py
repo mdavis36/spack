@@ -91,8 +91,10 @@ class Axom(CachedCMakePackage, CudaPackage):
     # Libraries
     depends_on("conduit+python", when="+python")
     depends_on("conduit~python", when="~python")
-    depends_on("conduit+hdf5", when="+hdf5")
-    depends_on("conduit~hdf5", when="~hdf5")
+    depends_on("conduit+hdf5+shared", when="+hdf5+shared")
+    depends_on("conduit+hdf5~shared", when="+hdf5~shared")
+    depends_on("conduit~hdf5+shared", when="~hdf5+shared")
+    depends_on("conduit~hdf5~shared", when="~hdf5~shared")
 
     # HDF5 needs to be the same as Conduit's
     depends_on("hdf5@1.8.19:1.8~cxx~fortran", when="+hdf5")
