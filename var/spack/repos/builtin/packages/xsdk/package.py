@@ -169,7 +169,7 @@ class Xsdk(BundlePackage, CudaPackage, ROCmPackage):
     xsdk_depends_on('petsc +batch', when='platform=cray @0.5.0:')
     xsdk_depends_on('petsc@main+mpi+hypre+superlu-dist+metis+hdf5~mumps+double~int64',
                     when='@develop', cuda_var='cuda')
-    xsdk_depends_on('petsc@3.16.0+mpi+hypre+superlu-dist+metis+hdf5~mumps+double~int64',
+    xsdk_depends_on('petsc@3.16.1+mpi+hypre+superlu-dist+metis+hdf5~mumps+double~int64',
                     when='@0.7.0', cuda_var='cuda')
     xsdk_depends_on('petsc@3.14.1+mpi+hypre+superlu-dist+metis+hdf5~mumps+double~int64',
                     when='@0.6.0', cuda_var='cuda')
@@ -328,7 +328,7 @@ class Xsdk(BundlePackage, CudaPackage, ROCmPackage):
     xsdk_depends_on('py-libensemble@develop+petsc4py', when='@develop +libensemble')
     xsdk_depends_on('py-petsc4py@main', when='@develop +libensemble')
     xsdk_depends_on('py-libensemble@0.8.0+petsc4py', when='@0.7.0 +libensemble')
-    xsdk_depends_on('py-petsc4py@3.16.0', when='@0.7.0 +libensemble')
+    xsdk_depends_on('py-petsc4py@3.16.1', when='@0.7.0 +libensemble')
     xsdk_depends_on('py-libensemble@0.7.1+petsc4py', when='@0.6.0 +libensemble')
     xsdk_depends_on('py-petsc4py@3.14.0', when='@0.6.0 +libensemble')
     xsdk_depends_on('py-libensemble@0.5.2+petsc4py', when='@0.5.0 +libensemble')
